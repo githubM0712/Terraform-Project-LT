@@ -33,8 +33,8 @@ module "ec2_instances" {
   public_subnet_ids        = module.vpc.public_subnet_ids
   bastion_public_subnet_id = module.vpc.public_subnet_ids[0]
   bastion_sg_id            = module.security_groups.bastion_sg_id
-  frontend_sg_name         = module.security_groups.frontend_sg_id
-  backend_sg_name          = module.security_groups.backend_sg_id
+  frontend_sg_id           = module.security_groups.frontend_sg_id
+  backend_sg_id            = module.security_groups.backend_sg_id
 }
 module "rds_instance" {
   source                 = "./modules/rds_instance"
