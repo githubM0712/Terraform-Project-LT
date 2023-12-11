@@ -49,7 +49,7 @@ module "rds_instance" {
   allocated_storage      = var.allocated_storage
   username               = var.username
   password               = var.password
-  rds_sg_id              = [modules.security_groups.rds_sg_id]
+  rds_sg_id              = [module.security_groups.rds_sg_id]
   private_subnet_ids     = module.vpc.private_subnet_ids
 }
 module "alb" {
