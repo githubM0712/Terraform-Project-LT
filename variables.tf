@@ -14,8 +14,8 @@ variable "private_subnets_cidr" {
   description = "A List of  public_subnet_cidr inside VPC"
   type        = list(string)
 }
-variable "avalability_zones" {
-  description = "A List of avalability_zones inside VPC"
+variable "availability_zones" {
+  description = "A List of availability_zones inside VPC"
   type        = list(string)
 }
 variable "bastion_sg_name" {
