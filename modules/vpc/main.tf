@@ -53,7 +53,7 @@ resource "aws_subnet" "private_subnet" {
   }
 }
 
-resource "aws_nat_gateway" "example" {
+resource "aws_nat_gateway" "nat_gw" {
   count         = length(var.public_subnets_cidr)
   allocation_id = aws_eip.nat[count.index].id
   subnet_id     = aws_subnet.public_subnet[count.index].id
