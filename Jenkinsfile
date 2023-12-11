@@ -38,7 +38,7 @@ pipeline {
                expression { env.Action == 'apply' }
           }
           steps {
-              input(message: "Approve Deployment?", ok: "Yes, deploy"
+              input(message: "Approve Deployment?", ok: "Yes, deploy")
           } 
        }
         stage('Apply'){
