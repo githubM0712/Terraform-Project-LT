@@ -57,7 +57,7 @@ pipeline {
                expression { env.Action == 'destroy' }
           }
           steps {
-            input(message: "Are you sure you want to destroy?" Review the plan above.", ok: "Yes, destroy")
+            input(message: "Are you sure you want to destroy? Review the plan above.", ok: "Yes, destroy")
 
       }
   }
