@@ -16,7 +16,7 @@ resource "aws_security_group" "alb_sg" {
     protocol          = "-1"
     cidr_blocks       = var.anywhere
 }
-
+}
 resource "aws_security_group" "bastion_sg" {
   name = var.bastion_sg_name
   description = var.bastion_sg_description
@@ -34,6 +34,7 @@ resource "aws_security_group" "bastion_sg" {
     to_port           = 0
     protocol          = "-1"
     cidr_blocks       = var.anywhere
+}
 }
 resource "aws_security_group" "frontend_sg" {
   name = var.frontend_sg_name
@@ -58,6 +59,7 @@ resource "aws_security_group" "frontend_sg" {
     to_port           = 0
     protocol          = "-1"
     cidr_blocks       = var.anywhere
+}
 }
 resource "aws_security_group" "rds_sg" {
   name = var.rds_sg_name
