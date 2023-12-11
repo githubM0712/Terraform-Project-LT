@@ -30,7 +30,7 @@ variable "engine" {
   description = "The name of the database engine to be used for  RDS instance cluster"
   type        = string
 }
-variable "engine version" {
+variable "engine_version" {
   description = "The database engine Version"
   type        = string
 }
