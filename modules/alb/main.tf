@@ -7,7 +7,7 @@ resource "aws_lb" "alb" {
 
   enable_deletion_protection = false
   tags = {
-    Environment = var.alb_name
+    Name = var.alb_name
   }
 }
 resource "aws_lb_target_group" "frontend_tg" {
