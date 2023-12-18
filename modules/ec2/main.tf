@@ -28,7 +28,7 @@ resource "aws_instance" "frontend_instances" {
                  sudo apt-get install -y apache2
                  sudo systemctl start apache2
                  sudo systemctl enable apache2
-                 echo "hello Frontend-${count.index + 1}" | sudo tee /var/www/html/index.html
+                 echo "hello Frontend ${count.index + 1}" | sudo tee /var/www/html/index.html
                 EOF 
 }
 resource "aws_instance" "backend_instances" {
@@ -48,7 +48,7 @@ resource "aws_instance" "backend_instances" {
                   sudo apt-get install -y apache2
                   sudo systemctl start apache2
                   sudo systemctl enable apache2
-                  echo "hello Backend-${count.index + 1}" | sudo tee /var/www/html/index.html
+                  echo "hello Backend ${count.index + 1}" | sudo tee /var/www/html/index.html
                  EOF
 }
 resource "aws_instance" "bastion_host" {
